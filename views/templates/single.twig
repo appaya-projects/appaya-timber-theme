@@ -1,21 +1,11 @@
 {% extends 'base.twig' %}
 
-{% block content %}
-	<main class="c-page">
-		<header class="c-page__header">
-			<div class="container">
-				<h1>{{post.title}}</h1>
-			</div>
-		</header>
+{% block header_in %}
+	<h1>{{post.title}}</h1>
+{% endblock %}
 
-		<section class="c-page__content">
-			<div class="container">
-				<div>
-					{{post.content}}
-				</div>
-			</div>
-		</section>
-
-		{% block custom %}{% endblock %}
-	</main>
+{% block content_in %}
+	<div>
+		{{post.content}}
+	</div>
 {% endblock %}
