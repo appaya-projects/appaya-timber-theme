@@ -21,7 +21,7 @@ if ( ! class_exists( 'Timber' ) ) {
 }
 
 
-Timber::$dirname = array('templates', 'views', 'partials');
+Timber::$dirname = array('views/templates', 'views/layouts', 'views/partials');
 
 require 'inc/appaya-wp-theme.php';
 

@@ -1,0 +1,58 @@
+{% extends '_default.twig' %}
+
+{% block nav %}
+	<nav class="c-main-nav">
+		<div class="container">
+			<div class="grid u-align-center">
+				<div class="grid__item sm-4">
+					<a href="{{site.url}}" class="o-logo">
+						{% if site.logo.src != null %}
+							<img src="{{site.logo.src('medium')}}" alt="{{site.name}}">
+						{% else %}
+							{{site.name}}
+						{% endif %}
+					</a>
+				</div>
+				<div class="grid__item sm-8">
+					<ul class="c-menu">
+						{% for menuItem in site.menus.primary.items %}
+							<li><a href="{{menuItem.link}}" class="c-menu__link">{{menuItem.title}}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+{% endblock %}
+
+{% block header %}
+	<section class="c-page__header {% block header_class %} {% endblock %}">
+		<div class="container">
+			{% block header_in %}
+				<h1>{{ post.title }}</h1>
+			{% endblock %}
+		</div>
+	</section>
+{% endblock %}
+
+{% block content %}
+	<section class="c-page__section {% block content_class %} {% endblock %}">
+		<div class="container">
+			{% block content_in %}
+				<div>
+					{{post.content}}
+				</div>
+			{% endblock %}
+		</div>
+	</section>
+{% endblock %}
+
+{% block footer %}
+	<footer class="c-main-footer">
+		<div class="container">
+			<p class="u-text-right">
+				Appaya WP Theme
+			</p>
+		</div>
+	</footer>
+{% endblock %}
