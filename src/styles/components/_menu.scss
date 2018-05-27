@@ -1,0 +1,20 @@
+.c-menu {
+	text-align: right;
+	margin: $base-spacer 0;
+	padding: 0;
+
+	list-style: none;
+
+	li {
+		display: inline-block;
+		padding-left: 15px;
+	}
+}
+
+.c-menu__link {
+	color: $background-color;
+	text-decoration: none;
+	font-size: size(5);
+	font-weight: 400;
+	text-transform: uppercase;
+}

@@ -1,0 +1,29 @@
+{% extends 'base.twig' %}
+
+{% set all_posts = site.get_posts() %}
+
+
+{% block header_class %}c-page__header--home{% endblock %}
+{% block header_in %}
+	<h1>Welcome to {{site.name}}</h1>
+{% endblock %}
+
+{% block content %}
+	<section class="c-page__section">
+		<div class="container">
+			{{post.content}}
+		</div>
+	</section>
+	<section class="c-page__section">
+		<div class="container">
+			<div class="grid">
+				{% for post in all_posts %}
+					<div class="grid__item md-6 xl-4">
+						{% include 'article-card.twig' %}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endblock %}
+
