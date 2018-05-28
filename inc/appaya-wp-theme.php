@@ -63,13 +63,29 @@ class AppayaWpTheme {
 		$twig->addExtension( new Twig_Extension_StringLoader() );
 
 
-		$twig->addFilter(new Twig_SimpleFilter('t', 'translate'));
+		$twig->addFilter(new Twig_SimpleFilter('t', array($this, 'translate')));
+		$twig->addFilter(new Twig_SimpleFilter('image_url', array($this, 'image_url')));
+		$twig->addFilter(new Twig_SimpleFilter('assets_url', array($this, 'assets_url')));
+		
 		return $twig;
 	}
 
 	public function translate($text) {
 		return $text;
 	}
+
+	public function image_url($text) {
+		$directory = get_template_directory_uri() .'/assets/images/'. $text;
+
+		return $directory;
+	}
+
+	public function assets_url($text) {
+		$directory = get_template_directory_uri() .'/assets/'. $text;
+
+		return $directory;
+	}
+
 
 	public function body_classes( $classes ) {
 		// Adds a class of hfeed to non-singular pages.
