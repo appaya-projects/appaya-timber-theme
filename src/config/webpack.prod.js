@@ -2,7 +2,8 @@ const webpack = require('webpack'),
 	webpackMerge = require('webpack-merge'),
 	commonConfig = require('./webpack.comm.js'),
 	path = require('path')
-	ImageminPlugin = require('imagemin-webpack-plugin').default;
+  ImageminPlugin = require('imagemin-webpack-plugin').default,
+  CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 

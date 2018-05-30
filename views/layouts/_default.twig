@@ -22,10 +22,12 @@
 
 <body {{fn('body_class')}}>
 	{% block nav %}{% endblock %}
+
 	<main class="c-page">
 		{% block header %}{% endblock %}
 		{% block content %}	{% endblock %}
 	</main>
+
 	{% block footer %}{% endblock %}
 
 	{{fn('wp_footer')}}

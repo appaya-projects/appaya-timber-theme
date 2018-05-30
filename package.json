@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "browser-sync": "^2.24.4"
+  },
   "devDependencies": {
     "awesome-typescript-loader": "^5.0.0",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "copy-webpack-plugin": "^4.5.1",
     "css-loader": "^0.28.11",
     "es6-promise": "^4.2.4",
@@ -31,8 +34,7 @@
   },
   "scripts": {
     "start": "webpack --watch",
-    "dev": "webpack-dev-server --inline --progress --port 8080 --config src/config/webpack.dev.js",
-    "build": "rimraf build && webpack --config src/config/webpack.prod.js"
+    "build": "rimraf assets && webpack --config src/config/webpack.prod.js"
   },
   "author": "Mateusz (@Raa) Szmytko",
   "license": "ISC"
