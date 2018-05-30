@@ -29,7 +29,7 @@ module.exports = webpackMerge(commonConfig, {
       }
     }),
     new BrowserSyncPlugin({
-      proxy: 'http://127.0.0.1/edsa-wp/',
+      proxy: 'your-wordpress.host',
       files: ['./*.php', './views/**/*.twig', './assets/**/*.*'],
     }),
     new CopyWebpackPlugin([{
