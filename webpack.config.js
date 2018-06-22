@@ -1,1 +1,1 @@
-module.exports = require('./src/config/webpack.watch.js');
+module.exports = require('./src/config/webpack.prod.js');
