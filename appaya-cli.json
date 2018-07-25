@@ -1,5 +1,5 @@
 {
-    "projectName": "My Appaya Project",
-    "projectType": "timber-theme",
+    "name": "My Appaya Project",
+    "type": "timber-theme",
     "slug": "my-appaya-project"
 }

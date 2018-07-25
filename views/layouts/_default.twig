@@ -13,7 +13,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-	<link rel="stylesheet" href="{{'main.css' | assets_url}}">
+	<link rel="stylesheet" href="{{'main.css' | static_url}}">
 
 	{% block head %}{% endblock %}
 
@@ -31,7 +31,7 @@
 	{% block footer %}{% endblock %}
 
 	{{fn('wp_footer')}}
-	<script src="{{'main.js' | assets_url}}"></script>
+	<script src="{{'main.js' | static_url}}"></script>
 	
 </body>
 </html>
