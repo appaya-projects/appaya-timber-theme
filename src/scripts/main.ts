@@ -1,2 +1,9 @@
+import { BehaviorBootstrap } from '@appaya/behavior';
+import { FormAjaxBehavior } from '@appaya/behavior/list';
+import { MyFormValidateBehavior } from './behaviors/my-form-validate.behavior';
 
-console.log('Hello world!');
+
+BehaviorBootstrap([
+	FormAjaxBehavior, 
+	MyFormValidateBehavior
+]);
