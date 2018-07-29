@@ -9,8 +9,9 @@
     "normalize.css": "^8.0.0"
   },
   "scripts": {
-    "start": "webpack --watch",
-    "build": "rimraf assets && webpack --config src/config/webpack.prod.js"
+    "start": "appaya dev",
+    "build": "appaya build",
+    "watch": "appaya watch"
   },
   "author": "Mateusz (@Raa) Szmytko",
   "license": "ISC"

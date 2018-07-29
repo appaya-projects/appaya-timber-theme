@@ -64,7 +64,7 @@ class AppayaWpTheme {
 
 
 		$twig->addFilter(new Twig_SimpleFilter('t', array($this, 'translate')));
-		$twig->addFilter(new Twig_SimpleFilter('assets_url', array($this, 'assets_url')));
+		$twig->addFilter(new Twig_SimpleFilter('image_url', array($this, 'image_url')));
 		$twig->addFilter(new Twig_SimpleFilter('static_url', array($this, 'static_url')));
 		
 		return $twig;
@@ -74,8 +74,8 @@ class AppayaWpTheme {
 		return $text;
 	}
 
-	public function assets_url($text) {
-		$directory = get_template_directory_uri() .'/static/assets/'. $text;
+	public function image_url($text) {
+		$directory = get_template_directory_uri() .'/static/images/'. $text;
 
 		return $directory;
 	}
