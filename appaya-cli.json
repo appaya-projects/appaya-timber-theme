@@ -2,9 +2,10 @@
     "name": "My Appaya Project",
     "type": "timber-theme",
     "slug": "my-appaya-project",
-    
-    "entry": "./src/page.js",
-    "output": "./static",
-    "proxy": "0.0.0.0",
-    "wordpressPath": "C:/wordpress/"
+    "config": {
+        "entry": "./src/page.js",
+        "output": "./static",
+        "proxy": "0.0.0.0",
+        "wordpressPath": "C:/wordpress/"
+    }
 }
